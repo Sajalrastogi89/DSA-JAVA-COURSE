@@ -1,0 +1,51 @@
+import java.util.Stack;
+
+class ListNode {
+    int data;
+    ListNode next;
+
+    ListNode(int data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+
+public class ReverseLinkedListDemo {
+    public static void main(String[] args) {
+        // Create nodes
+        ListNode head = new ListNode(1);
+        head.next = new ListNode(2);
+        head.next.next = new ListNode(3);
+
+        System.out.println("Using Stack:");
+        printLinkedListInReverseUsingStack(head);
+        
+        System.out.println("\nUsing Recursion:");
+        printLinkedListInReverseUsingRecursion(head);
+    }
+
+    // Method to reverse traverse using a stack
+    public static void printLinkedListInReverseUsingStack(ListNode head) {
+        Stack<ListNode> stack = new Stack<>();
+
+        ListNode current = head;
+        while (current != null) {
+            stack.push(current);
+            current = current.next;
+        }
+
+        while (!stack.isEmpty()) {
+            System.out.print(stack.pop().data + " ");
+        }
+    }
+
+    // Method to reverse traverse using recursion
+    public static void printLinkedListInReverseUsingRecursion(ListNode head) {
+        if (head == null) {
+            return;
+        }
+
+        printLinkedListInReverseUsingRecursion(head.next);
+        System.out.print(head.data + " ");
+    }
+}
