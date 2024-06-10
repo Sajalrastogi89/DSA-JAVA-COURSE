@@ -8,16 +8,17 @@ class ListNode {
         this.next = null;
     }
 }
-
+ 
 public class CircularLinkedListTraversal {
 
     public static void main(String[] args) {
-        // Create a sample circular linked list: 1 -> 2 -> 3 -> 4 -> 5
+        // Create a sample circular linked list: 1 -> 2 -> 3 -> 4 -> 5 -> 6
         ListNode head = new ListNode(1);
         ListNode node2 = new ListNode(2);
         ListNode node3 = new ListNode(3);
         ListNode node4 = new ListNode(4);
         ListNode node5 = new ListNode(5);
+        ListNode node5 = new ListNode(6);
 
         head.next = node2;
         node2.next = node3;
