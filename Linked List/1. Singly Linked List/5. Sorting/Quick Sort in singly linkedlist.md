@@ -1,4 +1,5 @@
-class ListNode {
+
+```javaclass ListNode {
     int data;
     ListNode next;
 

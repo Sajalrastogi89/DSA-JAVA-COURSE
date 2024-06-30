@@ -1,3 +1,4 @@
+```java
 class DoublyListNode {
     int data;
     DoublyListNode prev;
